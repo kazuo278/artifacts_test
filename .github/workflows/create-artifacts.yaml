@@ -1,0 +1,29 @@
+name: create artifacts
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-file:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: touch aaa.txt
+        run: >-
+          touch aaa.txt
+          touch bbb.txt
+          touch ccc.txt 
+      - name: upload to artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: aaa
+          path: aaa.txt
+      - name: upload to artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: bbb
+          path: bbb.txt
+      - name: upload to artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: ccc
+          path: ccc.txt
