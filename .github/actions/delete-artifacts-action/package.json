@@ -1,0 +1,19 @@
+{
+  "name": "delete-artifacts",
+  "version": "1.0.0",
+  "description": "Delete GitHub Actions Artifacts",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build src/index.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vercel/ncc": "^0.34.0"
+  },
+  "dependencies": {
+    "@actions/core": "^1.9.0",
+    "octokit": "^1.8.1"
+  }
+}

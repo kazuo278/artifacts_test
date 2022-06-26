@@ -1,0 +1,18 @@
+name: delete artifacts
+
+on:
+  workflow_dispatch:
+
+jobs:
+  delete-file:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: delete artifacts
+        uses: ./.github/actions/delete-artifacts-action/
+        with:
+          organization-name: kazuo278
+          except-artifact-name-list: aaa,bbb
+        env:
+          SECRET_API_TOKEN: ${{ secrets.API_TOKEN }}

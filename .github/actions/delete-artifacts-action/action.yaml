@@ -1,0 +1,12 @@
+name: 'Delete Artifact Action'
+description: '指定されたOrgnization内に存在するArtifact(一部を除く)を削除します'
+inputs:
+  organization-name:  
+    description: '組織名'
+    required: true
+  except-artifact-name-list:  
+    description: '削除除外Artifact名のリスト(,で区切る)'
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.mjs'

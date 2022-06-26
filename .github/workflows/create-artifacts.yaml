@@ -12,17 +12,17 @@ jobs:
           touch aaa.txt
           touch bbb.txt
           touch ccc.txt 
-      - name: upload to artifacts
+      - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: aaa
           path: aaa.txt
-      - name: upload to artifacts
+      - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: bbb
           path: bbb.txt
-      - name: upload to artifacts
+      - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: ccc
